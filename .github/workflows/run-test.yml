@@ -9,62 +9,83 @@ permissions:
 jobs:
   dotnet-ec2-adot-sigv4-test:
     uses: ./.github/workflows/dotnet-ec2-adot-sigv4-test.yml
+    secrets: inherit
     with:
       caller-workflow-name: 'test'
       sample-app-bucket-prefix: aws-application-signals-test-framework-test
+      
   dotnet-ec2-asg-test:
     uses: ./.github/workflows/dotnet-ec2-asg-test.yml
+    secrets: inherit
     with:
       aws-region: us-east-1
       caller-workflow-name: 'test'
       sample-app-bucket-prefix: aws-application-signals-test-framework-test
+      
   dotnet-ec2-nuget-test:
     uses: ./.github/workflows/dotnet-ec2-nuget-test.yml
+    secrets: inherit
     with:
       aws-region: us-east-1
       caller-workflow-name: 'test'
       sample-app-bucket-prefix: aws-application-signals-test-framework-test
+      
   dotnet-lambda-test:
     uses: ./.github/workflows/dotnet-lambda-test.yml
+    secrets: inherit
     with:
       aws-region: us-east-1
       caller-workflow-name: 'test'
       sample-app-bucket-prefix: aws-application-signals-test-framework-test
+      
   java-ec2-adot-sigv4-test:
     uses: ./.github/workflows/java-ec2-adot-sigv4-test.yml
+    secrets: inherit
     with:
       caller-workflow-name: 'test'
       sample-app-bucket-prefix: aws-application-signals-test-framework-test
+      
   java-ec2-ubuntu-test:
     uses: ./.github/workflows/java-ec2-ubuntu-test.yml
     with:
       aws-region: us-east-1
       caller-workflow-name: 'test'
       sample-app-bucket-prefix: aws-application-signals-test-framework-test
+      
   java-lambda-test:
     uses: ./.github/workflows/java-lambda-test.yml
+    secrets: inherit
     with:
       aws-region: us-east-1
       caller-workflow-name: 'test'
       sample-app-bucket-prefix: aws-application-signals-test-framework-test
+      
   node-ec2-adot-sigv4-test:
     uses: ./.github/workflows/node-ec2-adot-sigv4-test.yml
+    secrets: inherit
     with:
       caller-workflow-name: 'test'
       sample-app-bucket-prefix: aws-application-signals-test-framework-test
+      
   node-lambda-test:
     uses: ./.github/workflows/node-lambda-test.yml
+    secrets: inherit
     with:
       aws-region: us-east-1
       caller-workflow-name: 'test'
       sample-app-bucket-prefix: aws-application-signals-test-framework-test
+      
+      
   python-ec2-adot-sigv4-test:
     uses: ./.github/workflows/python-ec2-adot-sigv4-test.yml
+    secrets: inherit
     with:
       caller-workflow-name: 'test'
       sample-app-bucket-prefix: aws-application-signals-test-framework-test
+      
   python-lambda-test:
     uses: ./.github/workflows/python-lambda-test.yml
+    secrets: inherit
     with:
       aws-region: us-east-1
       caller-workflow-name: 'test'
